@@ -1,7 +1,5 @@
 # **Behavioral Cloning Project**
 
----
-
 The goals / steps of this project are the following:
 
 * Use the simulator to collect data of good driving behavior
@@ -77,7 +75,7 @@ The model was trained and validated on different data sets to ensure that the mo
 
 #### 3. Learning rate parameters are chosen with explanation, or an Adam optimizer is used.
 
-The model used an adam optimizer, so the learning rate was not tuned manually ([model.py](./model.py) line 207).
+Adam optimizer was used so that the learning rate was not tuned manually ([model.py](./model.py) line 207).
 
 #### 4. Training data has been chosen to induce the desired behavior in the simulation (i.e. keeping the car on the track).
 
@@ -126,7 +124,7 @@ Although the provided data was adequate for training of a successful model, I al
 ![image6]
 ![image7]
 
-The first two illustrates good driving behavior (Absolutely I am not a good game player) and following two are for teaching model how to recover from bad situations.
+The first two illustrates good driving behavior (Absolutely I am not a good video game player) and following two are for teaching model how to recover from bad situations.
 
 To increase data points, I used augmentation. For each data point, 6 variations (center and flipped center images, left and flipped left images and right and flipped right images) were created. Thus, from **1674** data points, I got **64044** images.
 
@@ -140,7 +138,7 @@ Preprocessing is embedded into model not to add normalization function to not to
 
 The number of epochs was **10**. It may or may not be ideal number but it was enough to overfitting. At this point, I used a model checkpoint saver to save best model according to validation loss to select best model at the end of training.
 
-I also used an adam optimizer not to optimize learning rate manually.
+I also used an adam optimizer not to tune learning rate manually.
 
 ### Simulation
 
